@@ -1,3 +1,7 @@
+#https://github.com/Yimo-Liu-13196/lab11-YL-IBD
+#Partner 1: Ido Ben David
+#Partner 2: Yimo Liu
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
