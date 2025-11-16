@@ -19,15 +19,19 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(sub(2, 1), 1)
         self.assertEqual(sub(1, 0), 1)
         self.assertEqual(sub(1, -1), 2)
-# ##########################
+##########################
 
-######## Partner 1
-# def test_multiply(self): # 3 assertions
-#     fill in code
+####### Partner 1
+    def test_multiply(self): # 3 assertions
+        self.assertEqual(mul(a=2, b=3), 6)
+        self.assertEqual(mul(a=3, b=0), 0)
+        self.assertEqual(mul(a=1, b=3), 3)
 
-# def test_divide(self): # 3 assertions
-#     fill in code
-# ##########################
+    def test_divide(self): # 3 assertions
+        self.assertEqual(div(2, 4), 2)
+        self.assertEqual(div(2, 10), 5)
+        self.assertEqual(div(3, -9), -3)
+##########################
 
 ######## Partner 2
     def test_divide_by_zero(self):# 1 assertion
@@ -51,23 +55,30 @@ class TestCalculator(unittest.TestCase):
 #     fill in code
 # ##########################
 
-######## Partner 1
-# def test_log_invalid_argument(self): # 1 assertion
-#     # call log function inside, example:
-#     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-#     #     logarithm(0, 5)
-#     fill in code
+####### Partner 1
+    def test_log_invalid_argument(self): # 1 assertion
+        # call log function inside, example:
+        # with self.assertRaises(<INSERT_ERROR_TYPE>):
+        #     logarithm(0, 5)
+        with self.assertRaises(ValueError):
+            log(0,5)
 
-# def test_hypotenuse(self): # 3 assertions
-#     fill in code
+    def test_hypotenuse(self): # 3 assertions
+        self.assertEqual(hypotenuse(3, 4), 5)
+        self.assertEqual(hypotenuse(5, 12), 13)
+        self.assertAlmostEqual(hypotenuse(1, 1), 1.414, places=2)
 
-# def test_sqrt(self): # 3 assertions
-#     # Test for invalid argument, example:
-#     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-#     #    square_root(NUM)
-#     # Test basic function
-#     fill in code
-##########################
+    def test_sqrt(self): # 3 assertions
+        # Test for invalid argument, example:
+        # with self.assertRaises(<INSERT_ERROR_TYPE>):
+        #    square_root(NUM)
+        # Test basic function
+        with self.assertRaises(ValueError):
+            square_root(-1)
+        self.assertEqual(square_root(a=4), 2)
+        self.assertEqual(square_root(a=16), 4)
+        self.assertEqual(square_root(a=100), 10)
+#########################
 
 # Do not touch this
 if __name__ == "__main__":
